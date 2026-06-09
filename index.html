@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laced by P — Luxury Hair Styling</title>
+  <meta name="description" content="Laced by P — premium lace wig installs and luxury hair styling. Book your appointment today." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo">Laced<span>by</span>P</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#book" class="nav-cta">Book Now</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <p class="eyebrow">Luxury Lace Installs &amp; Styling</p>
+      <h1>Laced by P</h1>
+      <p class="hero-sub">Flawless installs. Effortless confidence. Hair that turns heads.</p>
+      <a href="#book" class="btn btn-gold">Book an Appointment</a>
+    </div>
+    <div class="hero-scroll">scroll ↓</div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section" id="services">
+    <div class="section-head">
+      <p class="eyebrow">What I Offer</p>
+      <h2>Services</h2>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <h3>Lace Frontal Install</h3>
+        <p>Seamless, melted lace with a natural hairline tailored to your face.</p>
+        <span class="price">from $120</span>
+      </article>
+      <article class="service-card">
+        <h3>Closure Install</h3>
+        <p>Clean, protective installs with a flawless, secure finish.</p>
+        <span class="price">from $90</span>
+      </article>
+      <article class="service-card">
+        <h3>Custom Coloring</h3>
+        <p>Bespoke color, tinting and customization for your perfect look.</p>
+        <span class="price">from $75</span>
+      </article>
+      <article class="service-card">
+        <h3>Styling &amp; Restyle</h3>
+        <p>Curls, sleek looks and refreshes to keep your hair runway-ready.</p>
+        <span class="price">from $50</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="section gallery-section" id="gallery">
+    <div class="section-head">
+      <p class="eyebrow">The Work</p>
+      <h2>Gallery</h2>
+      <p class="section-note">Replace these with photos of your own work — see the README.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" style="--i:1"></div>
+      <div class="gallery-item" style="--i:2"></div>
+      <div class="gallery-item" style="--i:3"></div>
+      <div class="gallery-item" style="--i:4"></div>
+      <div class="gallery-item" style="--i:5"></div>
+      <div class="gallery-item" style="--i:6"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <p class="eyebrow">About</p>
+        <h2>Hi, I'm P</h2>
+        <p>Welcome to Laced by P — where every install is treated like a work of art. With a passion for precision and a love for making people feel their most confident, I specialize in natural, melted lace installs and luxury styling.</p>
+        <p>Whether it's your first wig or your fiftieth, you'll leave my chair feeling like the best version of yourself.</p>
+      </div>
+      <div class="about-image"></div>
+    </div>
+  </section>
+
+  <!-- ===== BOOKING ===== -->
+  <section class="section book" id="book">
+    <div class="section-head">
+      <p class="eyebrow">Let's Do This</p>
+      <h2>Book an Appointment</h2>
+      <p class="section-note">Fill this out and your email app will open with your request ready to send.</p>
+    </div>
+    <form class="book-form" id="bookForm">
+      <div class="row">
+        <label>
+          Name
+          <input type="text" name="name" required placeholder="Your name" />
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="phone" placeholder="(000) 000-0000" />
+        </label>
+      </div>
+      <label>
+        Service
+        <select name="service" required>
+          <option value="" disabled selected>Select a service</option>
+          <option>Lace Frontal Install</option>
+          <option>Closure Install</option>
+          <option>Custom Coloring</option>
+          <option>Styling &amp; Restyle</option>
+          <option>Not sure — help me choose</option>
+        </select>
+      </label>
+      <div class="row">
+        <label>
+          Preferred Date
+          <input type="date" name="date" />
+        </label>
+        <label>
+          Preferred Time
+          <input type="time" name="time" />
+        </label>
+      </div>
+      <label>
+        Notes
+        <textarea name="notes" rows="3" placeholder="Anything I should know? Hair color, length, occasion..."></textarea>
+      </label>
+      <button type="submit" class="btn btn-gold">Send Booking Request</button>
+    </form>
+
+    <div class="contact-alt">
+      <p>Prefer to reach out directly?</p>
+      <div class="contact-links">
+        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:hello@lacedbyp.com">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <a href="#home" class="logo">Laced<span>by</span>P</a>
+    <p>&copy; <span id="year"></span> Laced by P. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
