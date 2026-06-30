@@ -258,6 +258,113 @@ a { color: inherit; text-decoration: none; }
 .book-form textarea:focus { outline: none; border-color: var(--pink); }
 .book-form .btn { align-self: center; margin-top: 0.8rem; }
 
+/* ---- Booking step: calendar + time slots ---- */
+.booking-step { display: flex; flex-direction: column; gap: 0.8rem; animation: fadeUp 0.45s ease both; }
+
+.slots-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pink-deep);
+}
+
+.calendar {
+  background: #fff;
+  border: 1px solid rgba(224, 163, 180, 0.3);
+  border-radius: 4px;
+  padding: 1.2rem;
+}
+.cal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.cal-title { font-family: var(--serif); font-size: 1.3rem; color: var(--text); }
+.cal-nav {
+  background: none;
+  border: 1px solid rgba(224, 163, 180, 0.5);
+  color: var(--pink-deep);
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.cal-nav:hover:not(:disabled) { background: var(--pink); color: #fff; border-color: transparent; }
+.cal-nav:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 6px;
+}
+.cal-weekdays span {
+  text-align: center;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 4px 0;
+}
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+.cal-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.cal-cell.empty { background: none; }
+.cal-cell.disabled { color: #d8cad0; }
+.cal-cell.available {
+  cursor: pointer;
+  background: var(--surface);
+  transition: all 0.18s ease;
+}
+.cal-cell.available:hover { background: var(--pink-light); }
+.cal-cell.selected {
+  background: linear-gradient(135deg, var(--pink), var(--pink-light));
+  color: #fff;
+  font-weight: 500;
+}
+
+.slots-wrap { margin-top: 0.6rem; animation: fadeUp 0.4s ease both; }
+.slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.7rem;
+  margin-top: 0.6rem;
+}
+.slot {
+  background: #fff;
+  border: 1px solid rgba(224, 163, 180, 0.5);
+  color: var(--text);
+  padding: 0.75rem 0.5rem;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.slot:hover { border-color: var(--pink); }
+.slot.selected {
+  background: linear-gradient(135deg, var(--pink), var(--pink-light));
+  color: #fff;
+  border-color: transparent;
+}
+
 .contact-alt { text-align: center; margin-top: 3rem; color: var(--muted); }
 .contact-links { display: flex; gap: 2rem; justify-content: center; margin-top: 1rem; }
 .contact-links a {

@@ -121,7 +121,7 @@
       </div>
       <label>
         Service
-        <select name="service" required>
+        <select name="service" id="serviceSelect" required>
           <option value="" disabled selected>Select a service</option>
           <option>Lace Frontal Install</option>
           <option>Closure Install</option>
@@ -130,15 +130,33 @@
           <option>Not sure — help me choose</option>
         </select>
       </label>
-      <div class="row">
-        <label>
-          Preferred Date
-          <input type="date" name="date" />
-        </label>
-        <label>
-          Preferred Time
-          <input type="time" name="time" />
-        </label>
+
+      <!-- This whole step stays hidden until a service is chosen -->
+      <div class="booking-step" id="bookingStep" hidden>
+        <span class="slots-label">Pick an available day</span>
+
+        <!-- Custom calendar (built by script.js) -->
+        <div class="calendar" id="calendar">
+          <div class="cal-head">
+            <button type="button" class="cal-nav" id="calPrev" aria-label="Previous month">&lsaquo;</button>
+            <span class="cal-title" id="calTitle"></span>
+            <button type="button" class="cal-nav" id="calNext" aria-label="Next month">&rsaquo;</button>
+          </div>
+          <div class="cal-weekdays">
+            <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+          </div>
+          <div class="cal-grid" id="calGrid"></div>
+        </div>
+
+        <!-- Time slots appear once a day is picked -->
+        <div class="slots-wrap" id="slotsWrap" hidden>
+          <span class="slots-label">Choose an available time</span>
+          <div class="slots" id="slots"></div>
+        </div>
+
+        <!-- Hidden fields that carry the chosen day + time into the booking email -->
+        <input type="hidden" name="date" id="dateInput" />
+        <input type="hidden" name="time" id="timeInput" />
       </div>
       <label>
         Notes
